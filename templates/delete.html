@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<form method="POST"  enctype="multipart/form-data">
+    {%csrf_token%}
+
+  {{form}}
+    <div style="text-align:center;">
+    <h5>Are you sure to delete this file</h5>
+    <input type="submit">
+        </div>
+</form>
+{% endblock %}

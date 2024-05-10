@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<body>
+<h3>WELCOME TO TRUST BANK</h3>
+
+<div class="button">
+    {% if user.is_authenticated %}
+    <a class="btn btn-info" style="width:200px;" href="{% url 'account:view' %}">VIEW ALL</a><br><br>
+    <a class="btn btn-warning" style="width:200px;" href="{% url 'account:add' %}">ADD ACCOUNT</a><br><br>
+
+    <a class="btn btn-info" style="width:200px;" href="{% url 'account:logout' %}">SIGN-OUT</a><br><br>
+    {% else %}
+    <a class="btn btn-info" style="width:200px;" href="{% url 'account:register' %}">SIGN-UP</a><br><br>
+    <a class="btn btn-warning" style="width:200px;" href="{% url 'account:login' %}">SIGN-IN</a><br><br>
+    {% endif %}
+    </div>
+</body>
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

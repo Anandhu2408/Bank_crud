@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Add{% endblock %}
+{% block content %}
+
+
+
+<body>
+<h3>ADD YOUR ACCOUNT HERE</h3>
+<center><div class="bg-secondary" style="background-color:white;width:400px;height:630px;">
+<form method="post" enctype="multipart/form-data" class="p-4">
+    {% csrf_token %}
+  <div class="mb-3">
+    <label class="form-label"><b>NAME</b></label>
+      <br>
+    <input type="text" class="form-control" name="n" placeholder="Enter Your Name">
+
+  </div>
+    <br>
+     <div class="mb-3">
+    <label class="form-label"><b>AC NUMBER</b></label><br>
+    <input type="number" class="form-control" name="ac"  placeholder="Enter Ac Number">
+
+  </div>
+    <br>
+     <div class="mb-3">
+    <label class="form-label"><b>Address</b></label><br>
+    <input type="text" class="form-control" name="ad"  placeholder="Enter Your Address">
+
+  </div>
+    <br>
+    <div class="mb-3">
+    <label class="form-label"><b>MOBILE</b></label><br>
+    <input type="number" class="form-control" name="m" placeholder="Enter Your Mobile Number">
+
+  </div><br>
+        <div class="mb-3">
+    <label class="form-label"><b>AVAILABLE BALANCE</b></label><br>
+    <input type="number" class="form-control" name="b" placeholder="Enter Your Balance">
+            <br>
+     <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+
+
+
+
+
+
+</form>
+    </div>
+    </center>
+
+
+</body>
+{% endblock %}
